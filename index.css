@@ -30,3 +30,17 @@ button {
     font-weight: bold;
     color: white;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px
+}
+
+li {
+    margin-top: 5px;
+}
+
+li a {
+    color:#0077B5
+}
