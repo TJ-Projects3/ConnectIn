@@ -6,7 +6,8 @@ const listEl = document.getElementById("list-el")
 inputBtn.addEventListener("click", function() {
     userList.push(inputEl.value)
     inputEl.value = ""
-    renderList()
+    // localStorage.setItem("myLeads", JSON.stringify(myLeads)) // Local Storage only accepts strings
+    renderList() // renderList function to actually show the list
 })
 
 function renderList() {
