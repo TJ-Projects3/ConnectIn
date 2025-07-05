@@ -11,13 +11,13 @@ input {
     box-sizing: border-box;
     background: white;
     border: solid 1px #0077B5;
-    
 }
+
 
 button {
     margin-top: 8px;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #0077B5;
     background-color: #0077B5;
     font-weight: bold;
     color: white;
@@ -35,4 +35,9 @@ li {
 
 li a {
     color:#0077B5
+}
+
+#delete-btn {
+    background-color: white;
+    color: #0077B5;
 }
