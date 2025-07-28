@@ -3,21 +3,22 @@
 Easily track LinkedIn connections and profiles for better networking and leads.
 
 Table of Contents
-About ConnectIn
-Features
-How to Use
-Contributing
-License
-Contact
+- About ConnectIn
+- Features
+- How to Use
+- Contributing
+- License
+- Contact
 
 About ConnectIn
+
 ConnectIn is a simple browser extension designed to help you keep track of important LinkedIn profiles. Whether you're a recruiter, a job seeker, or just expanding your network, ConnectIn lets you save LinkedIn profile URLs for quick access, making your networking efforts more organized and efficient.
 
 Features
-Save Profiles: Quickly save any LinkedIn profile URL.
-Easy Access: Instantly revisit saved profiles with a click.
-Manage Connections: Keep a tidy list of your key LinkedIn contacts.
-Boost Efficiency: Spend less time searching and more time connecting.
+- Save Profiles: Quickly save any LinkedIn profile URL.
+- Easy Access: Instantly revisit saved profiles with a click.
+- Manage Connections: Keep a tidy list of your key LinkedIn contacts.
+- Boost Efficiency: Spend less time searching and more time connecting.
 
 How to Use
 Once you've installed ConnectIn from your browser's app store:
@@ -41,5 +42,3 @@ Contact
 For questions or feedback, please reach out:
 
 GitHub: TJ-Projects3
-
-LinkedIn: [Your LinkedIn Profile URL Here]
