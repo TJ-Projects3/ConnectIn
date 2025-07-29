@@ -3,36 +3,43 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const listEl = document.getElementById("list-el")
 const deleteBtn = document.getElementById("delete-btn")
-const listFromLocalStorage = JSON.parse(localStorage.getItem("myLeads")) // Parses stringed list out to become a regular list
+const listFromLocalStorage = JSON.parse(localStorage.getItem("userList")) // Parses stringed list out to become a regular list
+const tabBtn = document.getElementById("tab-btn")
 
-if (leadsFromLocalStorage) {
+if (listFromLocalStorage) {
     userList = listFromLocalStorage
-    renderList()
+    render(userList)
 }
 
-deleteBtn.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myLeads = []
-    renderList()
+tabBtn.addEventListener("click", function() {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabInfo) {
+        userList.push(tabInfo[0].url)
+        localStorage.setItem("userList", JSON.stringify(userList))
+        render(userList)
+    })
 })
 
-inputBtn.addEventListener("click", function() {
-    userList.push(inputEl.value)
-    inputEl.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads)) // Makes the list a string
-    renderList()
-})
-
-
-
-function renderList() {
+function render(list) {
     let inputList = ""
-    for (let i = 0; i < userList.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         inputList += `<li>
-                        <a href="${userList[i]}" target="_blank">
-                            ${userList[i]}
+                        <a href="${list[i]}" target="_blank">
+                            ${list[i]}
                         </a>
                      </li>`
     }
     listEl.innerHTML = inputList
 }
+
+deleteBtn.addEventListener("dblclick", function() {
+    localStorage.clear()
+    userList = []
+    render(userList)
+})
+
+inputBtn.addEventListener("click", function() {
+    userList.push(inputEl.value)
+    inputEl.value = ""
+    localStorage.setItem("userList", JSON.stringify(userList)) // Makes the list a string
+    render(userList)
+})
